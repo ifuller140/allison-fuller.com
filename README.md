@@ -1,102 +1,71 @@
-# Welcome to your Lovable project
+# [allison-fuller.com](https://allison-fuller.com)
 
-## Project info
+A professional personal portfolio website showcasing work in **Marketing**, **Film**, and **Social Media Management**. This site is designed to be clean, innovative, and creative, reflecting a high-end aesthetic.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌟 Key Features
 
-## How can I edit this code?
+- **Marketing Pitches**: Dedicated section with slideshow presentations of marketing strategies and pitches.
+- **Film & Video**: Integrated video player to showcase documentaries, short films, and visual narratives.
+- **Social Media Management**: Visual galleries highlighting digital presence and community building work.
+- **Project Deep-Dives**: Individual pages for every project to provide detailed context, roles, and tools used.
+- **Responsive Design**: Fully optimized for a premium experience across all devices.
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+This project is built with modern web technologies:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Framework**: [Vite](https://vitejs.dev/) + [React](https://reactjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/) (Radix UI)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Animations**: Tailwind Animate & Custom CSS Keyframes
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
+- [Node.js](https://nodejs.org) (v18+)
+- npm
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/ifuller140/allison-fuller.com.git
+cd allison-fuller.com
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Install dependencies
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
+The site will be available at `http://localhost:8080` (or `http://localhost:3000` if configured).
 
-**Edit a file directly in GitHub**
+## 📦 Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project is configured for deployment to **GitHub Pages**.
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-This project is configured for deployment to **GitHub Pages** with the custom domain **allison-fuller.com**.
-
-### 1. Preparation
-- Ensure you have a GitHub repository for this project.
-- Make sure your resume is at `public/resume.pdf`.
-
-### 2. Deployment Steps
-Run the following command in your terminal:
-```sh
+### Manual Deployment
+```bash
 npm run deploy
 ```
-This command will:
-1. Build the project into the `dist` folder.
-2. Push the contents of `dist` to a new `gh-pages` branch on GitHub.
+This script builds the project and pushes the `dist` folder to the `gh-pages` branch.
 
-### 3. GitHub Settings
-1. Go to your repository on GitHub.com.
-2. Click **Settings** > **Pages**.
-3. Under **Build and deployment**, ensure **Source** is set to "Deploy from a branch".
-4. Set the **Branch** to `gh-pages` and folder to `/(root)`.
-5. Under **Custom domain**, ensure `allison-fuller.com` is entered (it should be automatically detected from the `CNAME` file).
-6. Check **Enforce HTTPS**.
+### Custom Domain
+The site is configured to use the custom domain **allison-fuller.com**.
+- The `public/CNAME` file ensures GitHub Pages recognizes the domain.
+- DNS settings (A Records and CNAME) should be configured in your domain provider's dashboard.
 
-### 4. Domain Provider (DNS) Setup
-To point your domain to GitHub Pages, add these records at your domain provider (e.g., GoDaddy, Namecheap):
+## 📂 Project Structure
 
-**A Records (pointing to GitHub's IPs):**
-- `185.199.108.153`
-- `185.199.109.153`
-- `185.199.110.153`
-- `185.199.111.153`
+- `/src/pages`: Main page components (Home, Projects, Film, Social, Detail).
+- `/src/components`: UI components and layouts.
+- `/src/lib/data.ts`: Centralized data file for all projects.
+- `/public`: Static assets including `resume.pdf` and icons.
 
-**CNAME Record:**
-- Name: `www`
-- Value: `YOUR_GITHUB_USERNAME.github.io`
+## 🤝 Contact
 
-Once complete, your site will be live at [allison-fuller.com](https://allison-fuller.com).
+Feel free to reach out via the contact form on the website or directly via email.
 
+---
+Built with ❤️ for Allison Fuller.
