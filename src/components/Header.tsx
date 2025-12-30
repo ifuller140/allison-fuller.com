@@ -7,6 +7,7 @@ const navItems = [
   { label: "Film", path: "/film" },
   { label: "Social Media", path: "/social" },
   { label: "About", path: "/about" },
+  { label: "Resume", path: "/resume.pdf" },
 ];
 
 const Header = () => {
@@ -16,8 +17,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="font-display text-2xl font-semibold tracking-tight text-foreground hover:text-accent transition-colors"
           >
             Portfolio
