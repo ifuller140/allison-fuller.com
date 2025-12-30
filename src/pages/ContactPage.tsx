@@ -15,13 +15,51 @@ const ContactPage = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    // Environment variable for security
+    const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_KEY;
+
+    if (!FORMSPREE_ID || FORMSPREE_ID === "place_your_form_id_here") {
+      toast({
+        title: "Configuration Error",
+        description: "Form ID is missing. Please set VITE_FORMSPREE_KEY in your environment.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again or email me directly.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again or email me directly.",
+        variant: "destructive"
+      });
+    }
   };
 
   return (
@@ -36,7 +74,7 @@ const ContactPage = () => {
               Let's Work Together
             </h1>
             <p className="text-lg text-muted-foreground opacity-0 animate-fade-in" style={{ animationDelay: "200ms" }}>
-              Have a project in mind? I'd love to hear about it. Send me a message 
+              Have a project in mind? I'd love to hear about it. Send me a message
               and let's create something amazing together.
             </p>
           </div>
@@ -50,6 +88,7 @@ const ContactPage = () => {
                   </label>
                   <Input
                     id="name"
+                    name="name"
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -63,6 +102,7 @@ const ContactPage = () => {
                   </label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -78,6 +118,7 @@ const ContactPage = () => {
                 </label>
                 <Input
                   id="subject"
+                  name="subject"
                   type="text"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -92,6 +133,7 @@ const ContactPage = () => {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
@@ -115,11 +157,11 @@ const ContactPage = () => {
                 </h3>
                 <div className="space-y-4">
                   <a
-                    href="mailto:hello@example.com"
+                    href="mailto:arfuller18@gmail.com"
                     className="flex items-center gap-4 text-muted-foreground hover:text-accent transition-colors"
                   >
                     <Mail className="w-5 h-5" />
-                    <span>hello@example.com</span>
+                    <span>arfuller18@gmail.com</span>
                   </a>
                   <div className="flex items-center gap-4 text-muted-foreground">
                     <MapPin className="w-5 h-5" />
@@ -137,7 +179,7 @@ const ContactPage = () => {
                   Availability
                 </h3>
                 <p className="text-muted-foreground">
-                  Currently accepting new projects. Response time is typically 
+                  Currently accepting new projects. Response time is typically
                   within 24-48 hours during business days.
                 </p>
               </div>
@@ -147,7 +189,7 @@ const ContactPage = () => {
                   Quick Response
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  For urgent inquiries or quick questions, feel free to reach out 
+                  For urgent inquiries or quick questions, feel free to reach out
                   via email directly. I'm always happy to discuss potential collaborations.
                 </p>
               </div>

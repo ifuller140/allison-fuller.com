@@ -16,30 +16,30 @@ const AboutPage = () => {
                 <br />
                 <span className="italic font-normal">Strategic in Mind</span>
               </h1>
-              
+
               <div className="space-y-6 text-lg text-muted-foreground opacity-0 animate-fade-in" style={{ animationDelay: "200ms" }}>
                 <p>
-                  As a marketing and film major, I've developed a unique perspective 
-                  that bridges the gap between strategic thinking and creative execution. 
-                  My work is driven by a passion for storytelling and a commitment to 
+                  As a marketing and film major, I've developed a unique perspective
+                  that bridges the gap between strategic thinking and creative execution.
+                  My work is driven by a passion for storytelling and a commitment to
                   creating meaningful connections between brands and their audiences.
                 </p>
                 <p>
-                  With experience spanning brand strategy, film production, and social 
-                  media management, I bring a holistic approach to every project. I believe 
-                  that the best marketing doesn't feel like marketing — it feels like a 
+                  With experience spanning brand strategy, film production, and social
+                  media management, I bring a holistic approach to every project. I believe
+                  that the best marketing doesn't feel like marketing — it feels like a
                   story worth sharing.
                 </p>
                 <p>
-                  When I'm not crafting campaigns or behind the camera, you'll find me 
-                  exploring new cities, attending film festivals, or diving deep into 
+                  When I'm not crafting campaigns or behind the camera, you'll find me
+                  exploring new cities, attending film festivals, or diving deep into
                   the latest marketing trends and technologies.
                 </p>
               </div>
 
               <div className="mt-12 flex items-center gap-6 opacity-0 animate-fade-in" style={{ animationDelay: "300ms" }}>
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:arfuller18@gmail.com"
                   className="flex items-center gap-2 text-foreground hover:text-accent transition-colors"
                 >
                   <Mail className="w-5 h-5" />
@@ -78,7 +78,7 @@ const AboutPage = () => {
           <h2 className="font-display text-3xl font-semibold text-foreground mb-12 text-center">
             Skills & Expertise
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
