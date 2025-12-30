@@ -62,12 +62,41 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+This project is configured for deployment to **GitHub Pages** with the custom domain **allison-fuller.com**.
 
-## Can I connect a custom domain to my Lovable project?
+### 1. Preparation
+- Ensure you have a GitHub repository for this project.
+- Make sure your resume is at `public/resume.pdf`.
 
-Yes, you can!
+### 2. Deployment Steps
+Run the following command in your terminal:
+```sh
+npm run deploy
+```
+This command will:
+1. Build the project into the `dist` folder.
+2. Push the contents of `dist` to a new `gh-pages` branch on GitHub.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 3. GitHub Settings
+1. Go to your repository on GitHub.com.
+2. Click **Settings** > **Pages**.
+3. Under **Build and deployment**, ensure **Source** is set to "Deploy from a branch".
+4. Set the **Branch** to `gh-pages` and folder to `/(root)`.
+5. Under **Custom domain**, ensure `allison-fuller.com` is entered (it should be automatically detected from the `CNAME` file).
+6. Check **Enforce HTTPS**.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### 4. Domain Provider (DNS) Setup
+To point your domain to GitHub Pages, add these records at your domain provider (e.g., GoDaddy, Namecheap):
+
+**A Records (pointing to GitHub's IPs):**
+- `185.199.108.153`
+- `185.199.109.153`
+- `185.199.110.153`
+- `185.199.111.153`
+
+**CNAME Record:**
+- Name: `www`
+- Value: `YOUR_GITHUB_USERNAME.github.io`
+
+Once complete, your site will be live at [allison-fuller.com](https://allison-fuller.com).
+
