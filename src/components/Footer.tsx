@@ -53,12 +53,14 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <Link
-                  to="/resume.pdf"
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-accent transition-colors"
                 >
                   Resume
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

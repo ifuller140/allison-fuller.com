@@ -26,21 +26,39 @@ const Header = () => {
 
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={cn(
-                  "text-sm font-medium tracking-wide uppercase transition-all duration-300",
-                  "hover:text-accent relative",
-                  "after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300",
-                  "hover:after:w-full",
-                  location.pathname === item.path
-                    ? "text-foreground after:w-full"
-                    : "text-muted-foreground"
-                )}
-              >
-                {item.label}
-              </Link>
+              item.path.endsWith(".pdf") ? (
+                <a
+                  key={item.path}
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "text-sm font-medium tracking-wide uppercase transition-all duration-300",
+                    "hover:text-accent relative",
+                    "after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300",
+                    "hover:after:w-full",
+                    "text-muted-foreground"
+                  )}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={cn(
+                    "text-sm font-medium tracking-wide uppercase transition-all duration-300",
+                    "hover:text-accent relative",
+                    "after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300",
+                    "hover:after:w-full",
+                    location.pathname === item.path
+                      ? "text-foreground after:w-full"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </nav>
 
