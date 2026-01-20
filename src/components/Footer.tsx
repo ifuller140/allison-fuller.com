@@ -7,10 +7,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
             <Link to="/" className="font-display text-2xl font-semibold text-foreground">
-              Portfolio
+              Allison Fuller
             </Link>
             <p className="mt-4 text-muted-foreground max-w-sm">
-              Creative professional specializing in marketing, film production, and social media management.
+              Digital marketing and content strategist at Brandeis University.
+              Seeking Summer 2026 internship opportunities.
             </p>
           </div>
 
@@ -33,26 +34,42 @@ const Footer = () => {
           <div>
             <h4 className="font-medium text-foreground mb-4">Connect</h4>
             <ul className="space-y-3">
-              {["LinkedIn", "Instagram", "Vimeo", "Email"].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="text-muted-foreground hover:text-accent transition-colors"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/allison-fuller-031075280/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:arfuller18@gmail.com"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                >
+                  Email
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/resume.pdf"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                >
+                  Resume
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} All rights reserved.
+            © {new Date().getFullYear()} Allison Fuller. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Designed with intention
+            Brandeis University '28
           </p>
         </div>
       </div>

@@ -21,7 +21,7 @@ const Header = () => {
             to="/"
             className="font-display text-2xl font-semibold tracking-tight text-foreground hover:text-accent transition-colors"
           >
-            Portfolio
+            Allison Fuller
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

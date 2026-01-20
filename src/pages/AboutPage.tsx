@@ -12,28 +12,39 @@ const AboutPage = () => {
                 About Me
               </p>
               <h1 className="font-display text-5xl lg:text-6xl font-semibold text-foreground mb-8 opacity-0 animate-fade-in" style={{ animationDelay: "100ms" }}>
-                Creative at Heart,
+                Digital Marketing
                 <br />
-                <span className="italic font-normal">Strategic in Mind</span>
+                <span className="italic font-normal">& Content Strategist</span>
               </h1>
 
               <div className="space-y-6 text-lg text-muted-foreground opacity-0 animate-fade-in" style={{ animationDelay: "200ms" }}>
                 <p>
-                  As a marketing and film major, I've developed a unique perspective
-                  that bridges the gap between strategic thinking and creative execution.
-                  My work is driven by a passion for storytelling and a commitment to
-                  creating meaningful connections between brands and their audiences.
+                  I'm a digital marketing and content strategist passionate about
+                  turning creative ideas into high-impact storytelling. Currently studying
+                  Business (Marketing specialization) and Film/TV/Media at Brandeis University,
+                  I'm building a strong foundation in brand strategy, media production, and
+                  audience engagement.
                 </p>
                 <p>
-                  With experience spanning brand strategy, film production, and social
-                  media management, I bring a holistic approach to every project. I believe
-                  that the best marketing doesn't feel like marketing — it feels like a
-                  story worth sharing.
+                  I've managed social media and digital campaigns for brands in
+                  entertainment, tech, and lifestyle — including developing multi-platform
+                  strategy for four brands at Adamit Productions and contributing to digital
+                  initiatives at Roc Nation. Whether I'm producing short-form content,
+                  analyzing performance trends, creating brand identity guides, or supporting
+                  cross-brand collaborations, I approach marketing with a balance of
+                  creativity, data, and strategic thinking.
                 </p>
                 <p>
-                  When I'm not crafting campaigns or behind the camera, you'll find me
-                  exploring new cities, attending film festivals, or diving deep into
-                  the latest marketing trends and technologies.
+                  I'm especially interested in roles that combine brand storytelling,
+                  social media, content production, and entertainment marketing. I love
+                  working in fast-paced, collaborative environments where I can bring ideas
+                  to life and help brands connect meaningfully with their audiences.
+                </p>
+              </div>
+
+              <div className="mt-8 p-6 bg-accent/10 border border-accent/30 rounded-lg opacity-0 animate-fade-in" style={{ animationDelay: "250ms" }}>
+                <p className="text-accent font-medium text-center">
+                  🎯 Actively seeking a Summer 2026 internship in marketing, brand strategy, or entertainment
                 </p>
               </div>
 
@@ -46,18 +57,13 @@ const AboutPage = () => {
                   <span>Email</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/allison-fuller-031075280/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-foreground hover:text-accent transition-colors"
                 >
                   <Linkedin className="w-5 h-5" />
                   <span>LinkedIn</span>
-                </a>
-                <a
-                  href="#"
-                  className="flex items-center gap-2 text-foreground hover:text-accent transition-colors"
-                >
-                  <Instagram className="w-5 h-5" />
-                  <span>Instagram</span>
                 </a>
               </div>
             </div>
@@ -75,23 +81,27 @@ const AboutPage = () => {
 
       <section className="py-20 bg-card">
         <div className="container mx-auto px-6 lg:px-12">
-          <h2 className="font-display text-3xl font-semibold text-foreground mb-12 text-center">
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4 text-center">
             Skills & Expertise
           </h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+            Brandeis University | Dual BA in Business (Marketing) & Film/TV/Media | GPA: 3.9<br />
+            Presidential Scholar | Dean's List 2024-2025
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Marketing Strategy",
-                skills: ["Brand Development", "Campaign Planning", "Market Research", "Content Strategy", "Analytics & Insights"],
+                title: "Digital Marketing",
+                skills: ["Social Media Strategy", "Brand Strategy", "Campaign Development", "SEO & Content Marketing", "Email Marketing", "A/B Testing", "Trend Analysis"],
               },
               {
-                title: "Film Production",
-                skills: ["Directing", "Screenwriting", "Cinematography", "Video Editing", "Color Grading"],
+                title: "Technical Tools",
+                skills: ["Metricool", "Manychat", "Google Ads", "Mailchimp", "WordPress", "Click Up", "Microsoft Suite"],
               },
               {
-                title: "Social Media",
-                skills: ["Content Creation", "Community Management", "Influencer Marketing", "Paid Advertising", "Platform Strategy"],
+                title: "Content & Production",
+                skills: ["Adobe Premiere Pro", "CapCut", "Canva", "Video Editing", "Copywriting", "Content Creation", "Client Outreach"],
               },
             ].map((category, index) => (
               <div

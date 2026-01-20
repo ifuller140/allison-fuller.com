@@ -9,7 +9,7 @@ const Index = () => {
   return (
     <Layout>
       <Hero />
-      
+
       <div id="work">
         <ProjectGrid
           projects={featuredProjects}
@@ -27,18 +27,23 @@ const Index = () => {
                 <br />
                 <span className="italic font-normal">Something Great</span>
               </h2>
+              <p className="text-lg text-muted-foreground mb-4">
+                I'm a sophomore at Brandeis University studying Business and Film, and I'm
+                actively seeking a Summer 2026 internship in digital marketing, brand strategy,
+                or entertainment marketing.
+              </p>
               <p className="text-lg text-muted-foreground mb-8">
-                Whether you need a compelling marketing campaign, a captivating film, 
-                or a strategic social media presence, I'm here to bring your vision to life.
+                Whether you need strategic social media management, compelling content creation,
+                or data-driven marketing insights, I'd love to bring my creativity and skills to your team.
               </p>
               <a
                 href="/contact"
                 className="inline-flex px-8 py-4 bg-foreground text-background text-sm font-medium tracking-wide uppercase rounded-full hover:bg-accent transition-colors duration-300"
               >
-                Start a Conversation
+                Let's Connect
               </a>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="aspect-square bg-secondary rounded-lg" />

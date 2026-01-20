@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, UserPlus } from "lucide-react";
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -71,11 +71,12 @@ const ContactPage = () => {
               Get in Touch
             </p>
             <h1 className="font-display text-5xl lg:text-6xl font-semibold text-foreground mb-6 opacity-0 animate-fade-in" style={{ animationDelay: "100ms" }}>
-              Let's Work Together
+              Let's Connect
             </h1>
             <p className="text-lg text-muted-foreground opacity-0 animate-fade-in" style={{ animationDelay: "200ms" }}>
-              Have a project in mind? I'd love to hear about it. Send me a message
-              and let's create something amazing together.
+              I'm actively seeking a Summer 2026 internship in digital marketing, brand strategy,
+              or entertainment marketing. If you're working on something creative, strategic, or
+              media-focused — I'd love to hear from you.
             </p>
           </div>
 
@@ -165,12 +166,17 @@ const ContactPage = () => {
                   </a>
                   <div className="flex items-center gap-4 text-muted-foreground">
                     <MapPin className="w-5 h-5" />
-                    <span>New York, NY</span>
+                    <span>Great Neck, NY / Waltham, MA</span>
                   </div>
-                  <div className="flex items-center gap-4 text-muted-foreground">
-                    <Phone className="w-5 h-5" />
-                    <span>Available upon request</span>
-                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/allison-fuller-031075280/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 text-muted-foreground hover:text-accent transition-colors"
+                  >
+                    <UserPlus className="w-5 h-5" />
+                    <span>Connect on LinkedIn</span>
+                  </a>
                 </div>
               </div>
 
@@ -179,18 +185,19 @@ const ContactPage = () => {
                   Availability
                 </h3>
                 <p className="text-muted-foreground">
-                  Currently accepting new projects. Response time is typically
-                  within 24-48 hours during business days.
+                  Currently a sophomore at Brandeis University, seeking a Summer 2026 internship.
+                  Available for full-time summer opportunities from May - August 2026.
                 </p>
               </div>
 
-              <div className="p-8 bg-card rounded-lg">
+              <div className="p-8 bg-card rounded-lg border border-accent/30">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-4">
-                  Quick Response
+                  🎯 Summer 2026 Internship
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  For urgent inquiries or quick questions, feel free to reach out
-                  via email directly. I'm always happy to discuss potential collaborations.
+                  I'm actively seeking internship opportunities in digital marketing,
+                  brand strategy, social media, or entertainment marketing. Let's discuss
+                  how I can contribute to your team!
                 </p>
               </div>
             </div>
